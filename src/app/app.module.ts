@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule} from '@angular/router';
 
-import { ROUTES } from './app.route';
+import { APP_ROUTE } from './app.route';
 import { AppComponent } from './app.component';
 import { MyPickComponent } from './my-pick/my-pick.component';
 import { SignupComponent } from './signup/signup.component';
@@ -23,7 +23,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES)
+    APP_ROUTE
   ],
   providers: [],
   bootstrap: [AppComponent]
