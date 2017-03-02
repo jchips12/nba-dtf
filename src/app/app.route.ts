@@ -1,13 +1,16 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
 
 import { MyPickComponent } from './my-pick/my-pick.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-export const ROUTES: Routes = [
+const ROUTES: Routes = [
     { path: '', component: MyPickComponent },
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
     { path: '**', component: PageNotFoundComponent}
 ];
+
+export const APP_ROUTE: ModuleWithProviders = RouterModule.forRoot(ROUTES);
