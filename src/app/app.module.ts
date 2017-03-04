@@ -10,6 +10,8 @@ import { MyPickComponent } from './my-pick/my-pick.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DailyLeadersComponent } from './daily-leaders/daily-leaders.component';
+import { DailyLeadersService } from './_service/daily-leaders.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MyPickComponent,
     SignupComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DailyLeadersComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HttpModule,
     APP_ROUTE
   ],
-  providers: [],
+  providers: [DailyLeadersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
